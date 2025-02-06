@@ -219,3 +219,21 @@
         margin-right: 9px;
     }
 }
+
+ 
+
+@media (max-width: 640px) {
+    .toggleContainer {
+        width: 36px;
+        height: 20px;
+
+        div {
+            width: 14px;
+            height: 14px;
+        }
+
+        &.active div {
+            transform: translateX(16px);
+        }
+    }
+}
