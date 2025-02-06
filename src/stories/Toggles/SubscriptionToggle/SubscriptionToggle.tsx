@@ -17,15 +17,15 @@ type SubscriptionToggleProps = {
 };
 
 const SubscriptionToggle = ({ plans }: SubscriptionToggleProps) => {
+    // Track which plans are expanded (multiple open plans allowed)
+    const [activePlanIndex, setActivePlanIndex] = useState<number | null>(null);
 
-    const [openPlans, setOpenPlans] = useState<number[]>([]);
 
+    
+
+    // Handle toggling dropdown details
     const handleToggle = (index: number) => {
-        if (openPlans.includes(index)) {
-            setOpenPlans(openPlans.filter((i) => i !== index));
-        } else {
-            setOpenPlans([...openPlans, index]);
-        }
+        setActivePlanIndex((prevIndex) => (prevIndex === index ? null : index));
     };
 
     return (
@@ -33,7 +33,7 @@ const SubscriptionToggle = ({ plans }: SubscriptionToggleProps) => {
             {plans.map((plan, index) => (
                 <div
                     key={index}
-                    className={`${styles.plan} ${openPlans.includes(index) ? styles.active : ''}`}
+                    className={`${styles.plan} ${activePlanIndex === index ? styles.active : ''}`}
                 >
                     <div className={styles.planHeader} onClick={() => handleToggle(index)}>
                         <div>
@@ -50,11 +50,11 @@ const SubscriptionToggle = ({ plans }: SubscriptionToggleProps) => {
                         <input
                             type="radio"
                             name="subscription"
-                            checked={openPlans.includes(index)}
+                            checked={activePlanIndex === index}
                             readOnly
                         />
                     </div>
-                    {openPlans.includes(index) && (
+                    {activePlanIndex === index && (
                         <div className={styles.planDetails}>
                             <div>
                                 <ul className={styles.ticklist}>
