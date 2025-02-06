@@ -199,7 +199,7 @@ const Catalog = () => {
                     </div>
                     <div className='flex flex-col min-w-[370px] w-full'>
                         <h1 className='mt-[50px] text-[24px] text-[#1f2937] font-medium'>Saved Filters</h1>
-                        <div className='mt-[35px] h-[400px] noscrollbar overflow-scroll'>
+                        <div className='mt-[35px] h-[400px] noscrollbar overflow-scroll '>
                             <SavedFilter filters={filters} onFiltersUpdate={setFilters} />
                         </div>
                         <div className='absolute bottom-[30px]'>

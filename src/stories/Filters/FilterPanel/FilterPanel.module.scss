@@ -56,12 +56,13 @@
     align-items: center;
     margin-top: 6px;
     margin-bottom: 20px;
-    cursor: pointer;
-
-    img {
-        height: 15px;
-    }
+    cursor: pointer  !important;
 }
+
+.savedFilter img {
+    height: 15px;
+}
+
 
 .savedFilter>div>h1 {
     color: #1F2937;
@@ -166,30 +167,34 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
-
-    button {
-        width: 190px;
-        height: 52px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-    }
+    cursor: pointer  !important;
 }
+
+.buttonContainer button {
+    width: 190px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer  !important;
+}
+
 
 .saveFilters {
     background-color: white;
     border: 1.5px solid #893168;
     color: #893168;
+    cursor: pointer  !important;
 }
 
 .seeListings {
     background-color: #893168;
     border: none;
     color: white;
+    cursor: pointer  !important;
 }
 
 

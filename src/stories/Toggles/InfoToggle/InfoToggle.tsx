@@ -21,11 +21,9 @@ const InfoToggle = ({ plans }: InfoToggleProps) => {
     const [hoveredInfo, setHoveredInfo] = useState<{ [key: string]: boolean }>({});
 
     const handleToggle = (index: number) => {
-        if (openPlans.includes(index)) {
-            setOpenPlans(openPlans.filter((i) => i !== index));
-        } else {
-            setOpenPlans([...openPlans, index]);
-        }
+        setOpenPlans((prevOpenPlans) =>
+            prevOpenPlans.includes(index) ? [] : [index]
+        );
     };
 
     const handleMouseEnter = (key: string) => {
