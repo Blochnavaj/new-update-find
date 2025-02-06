@@ -19,21 +19,21 @@ const ProfilePage = () => {
                     <Link to="/subscription">
                         <div className='z-50 absolute right-[150px] top-1/3 h-[52px] w-[190px] '>
                         </div>
-                    </Link>
                     <SubscriptionCard active='Free' subscription='Free Plan' />
+                    </Link>
                 </div>
             </div>
 
             <div className='w-[915px] mt-[30px]'>
                 <h1 className='text-[16px] font-medium text-[#1f2937] mb-[15px]'>Profile</h1>
-                <div className='flex flex-col md:flex-row items-center w-full justify-between'>
+                <div className='flex flex-col md:flex-row items-center w-full justify-between space-y-3'>
                     <EditableInputField title='Name' initialActive='saved' label='Ivan Ivanov' />
                     <EditableInputField title='Email' initialActive='saved' label='ivanivanov@gmail.com' />
                 </div>
             </div>
             <div className='w-[915px] mt-[30px]'>
                 <h1 className='text-[16px] font-medium text-[#1f2937] mb-[15px]'>More</h1>
-                <div className='flex flex-col md:flex-row items-center w-full justify-between '>
+                <div className='flex flex-col md:flex-row items-center w-full justify-between  space-y-3'>
                     <Link to='/notifications'>
                         <InfoCard active='Notifications'
                             imgpath={notifications}
