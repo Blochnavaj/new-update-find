@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
             <div className='w-[915px] mt-[30px]'>
                 <h1 className='text-[16px] font-medium text-[#1f2937] mb-[15px]'>Profile</h1>
-                <div className='flex flex-col md:flex-row items-center w-full justify-between '>
+                <div className='flex flex-col md:flex-row items-center w-full justify-between'>
                     <EditableInputField title='Name' initialActive='saved' label='Ivan Ivanov' />
                     <EditableInputField title='Email' initialActive='saved' label='ivanivanov@gmail.com' />
                 </div>

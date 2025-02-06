@@ -33,24 +33,24 @@ const EditableInputField = (props: EditableInputFieldProps) => {
                 <h1>{title}</h1>
                 {active === 'editable' ? <input type="text" /> : <h1>{label}</h1>}
             </div>
-            {/* show pen icon in saved mode  */}
-            {active === 'saved' ? (
+            {/* Show edit and save icons only for the "Name" field */}
+            {title === 'Name' && active === 'saved' && (
                 <img
                     src={edit} // Pen icon for switching to editable mode
                     alt="Edit"
                     onClick={() => setActive('editable')}
                     style={{ cursor: 'pointer' }}
                 />
-            ) : (
+            )}
+
+            {title === 'Name' && active === 'editable' && (
                 <img
-                    src={save} // Floppy icon for saving and switching back to view mode
+                    src={save} // Floppy disk icon for saving and switching back to view mode
                     alt="Save"
                     onClick={() => setActive('saved')}
                     style={{ cursor: 'pointer' }}
                 />
             )}
-
-
         </div>
     );
 };
