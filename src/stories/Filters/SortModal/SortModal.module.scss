@@ -1,0 +1,182 @@
+.filterContainer {
+    position: fixed;
+    top: 0;
+    right: -472px;
+    /* Initially off-screen */
+    width: 472px;
+    height: 100vh;
+    max-height: 900px;
+    padding: 45px 24px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    /* Add a smooth transition effect */
+
+    &.open {
+        right: 0;
+        /* When open, the modal moves into view */
+    }
+
+    img {
+        width: 15px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    h1 {
+        color: #1F2937;
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type='radio'] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid #893168;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &:checked {
+            background-color: white;
+            border: 1.5px solid #893168;
+        }
+
+        &:checked::after {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: #893168;
+            border-radius: 50%;
+            margin: auto;
+            top: 2.5px;
+            position: relative;
+        }
+    }
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: #E5E7EB;
+    margin-top: auto;
+}
+
+.seeListings {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #893168;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 20px;
+}
+
+.sortOption {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1f2937;
+
+    span {
+        color: #6B7280;
+        font-weight: 400;
+    }
+}
+
+.topbar {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .filterContainer {
+        width: 390px;
+        height: 705px;
+        padding: 21px 10px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 20px;
+        right: -390px;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        /* Initially off-screen */
+    }
+
+    .filterContainer.open {
+        right: 0;
+        /* When open, the modal moves into view */
+    }
+
+    .topbar {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-top: 20px;
+        background-color: #E5E7EB;
+    }
+
+    .filterContainer>img {
+        width: 15px;
+        margin-left: 0;
+        cursor: pointer;
+    }
+
+    .filterContainer>h1 {
+        display: none;
+    }
+
+    .searchbox {
+        width: 100%;
+        height: 29px;
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+    .searchbox>input {
+        margin-left: 0;
+    }
+
+    .searchbox>img {
+        display: none;
+    }
+
+    .checkbox>label {
+        font-size: 14px;
+    }
+}

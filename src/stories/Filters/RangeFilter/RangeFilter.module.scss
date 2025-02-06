@@ -1,0 +1,127 @@
+.rangeFilter {
+    width: 100%;
+    max-width: 473px;
+    background-color: transparent;
+    padding: 30px 0;
+    font-family: 'Inter', sans-serif;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 12px;
+
+        .arrow {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .downarrow {
+            width: 15px;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            color: #1F2937;
+        }
+    }
+
+    .sliderWrapper {
+        position: relative;
+        margin: 16px 0;
+        background-color: #e5e7eb;
+        height: 4px;
+        border-radius: 2px;
+
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            background: transparent;
+            pointer-events: none;
+            z-index: 20;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                background: #893168;
+                border-radius: 50%;
+                pointer-events: auto;
+                cursor: pointer;
+            }
+
+            &::-moz-range-thumb {
+                width: 16px;
+                height: 16px;
+                background: #893168;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+        .track {
+            position: absolute;
+            height: 4px;
+            background: #893168;
+            /* Purple color for the active range */
+            z-index: 10;
+        }
+
+        .slider.maxValue {
+            z-index: 25;
+        }
+    }
+
+    .inputWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .inputBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 124px;
+            height: 42px;
+
+            border: 1.5px solid #E5E7EB;
+            border-radius: 24px;
+            background: #fff;
+
+
+            input {
+                border: none;
+                outline: none;
+                text-align: left;
+                width: 70px;
+                font-size: 16px;
+                color: #1F2937;
+                font-weight: 500;
+                padding: 0;
+                margin-left: 8px;
+            }
+
+            span {
+                font-size: 16px;
+                color: #1F2937;
+                font-weight: 500;
+            }
+        }
+
+        .inputBox:focus-within {
+            border: 1.5px solid #893168;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .rangeFilter {
+        padding: 15px 0;
+    }
+}

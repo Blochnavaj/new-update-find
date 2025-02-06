@@ -1,0 +1,85 @@
+.filterContainer {
+    width: 100%;
+    max-width: 424px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filterHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        color: #1f2937;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    img {
+        width: 15px;
+    }
+}
+
+.checkboxContainer {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    column-gap: 8px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+
+    input[type='checkbox'] {
+        appearance: none;
+        /* Hides the default checkbox */
+        -webkit-appearance: none;
+        /* For Safari */
+        -moz-appearance: none;
+        /* For Firefox */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid #893168;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+
+        &:checked {
+            background-color: transparent;
+            /* White background when checked */
+            border-color: #893168;
+        }
+
+        &:checked::after {
+            content: '';
+            /* Add the purple tick */
+            position: absolute;
+            width: 5px;
+            height: 10px;
+            border: solid #893168;
+            /* Purple tick */
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            bottom: 2px;
+        }
+    }
+
+    label {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: #1f2937;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

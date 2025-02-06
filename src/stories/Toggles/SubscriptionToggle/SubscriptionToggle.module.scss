@@ -1,0 +1,195 @@
+* {
+    accent-color: #893168;
+    font-family: 'Inter';
+}
+
+.subscriptionToggle {
+    display: flex;
+    flex-direction: column;
+    width: 914px;
+}
+
+.plan {
+    overflow: hidden;
+    transition: all 0.3s;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.planHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1.5px solid #893168;
+    border-radius: 20px;
+    height: 90px;
+    padding: 0 24px;
+
+
+    h2 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #1F2937;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        margin: 0;
+        font-size: 24px;
+        color: #1F2937;
+        font-weight: 700;
+
+        span {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+}
+
+.planHeader>div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.planHeader>div>h2 {
+    width: 50%;
+}
+
+.discount {
+    margin-left: 8px;
+    background-color: #893168;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.planDetails {
+    padding: 16px;
+
+    ul {
+        padding: 0;
+
+
+        li {
+            display: flex;
+            align-items: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #E5E7EB;
+            margin-bottom: 8px;
+            color: #1F2937;
+            list-style-image: url("./../../../assets/purpleTick.png");
+            font-size: 18px;
+            font-weight: 400;
+
+            img {
+                width: 14px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+.planDetails>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.planDetails>div>ul {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.subscribeButton {
+    width: 324px;
+    display: block;
+    height: 52px;
+    background-color: #893168;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.additionalInfo {
+    font-size: 14px;
+    color: #6B7280;
+    width: 482px;
+}
+
+.active>.planHeader {
+    border-color: #893168;
+}
+
+@media (max-width: 640px) {
+    .subscriptionToggle {
+        width: 371px;
+    }
+
+    .planHeader {
+        padding-left: 20px;
+    }
+
+    .planHeader>div {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .planHeader>div>p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .planHeader>div>p>span {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .planHeader>div>h2 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .planHeader>div>h2>span {
+        font-size: 14px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .planDetails>div {
+        flex-direction: column;
+    }
+
+    .planDetails>div>ul {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .planDetails>div>ul>li {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .additionalInfo {
+        width: 100%;
+    }
+
+    .subscribeButton {
+        width: 100%;
+        margin-top: 12px;
+    }
+}

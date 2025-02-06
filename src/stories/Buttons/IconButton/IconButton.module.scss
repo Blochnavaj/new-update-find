@@ -1,0 +1,36 @@
+.button {
+    padding: 18px 0;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    display: inline-block;
+    text-align: center;
+    width: 441px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: white;
+    background-color: #893168;
+}
+
+.button>img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+@media (max-width: 640px) {
+    .button {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .button>img {
+        width: 12px;
+        margin-right: 4px;
+    }
+}

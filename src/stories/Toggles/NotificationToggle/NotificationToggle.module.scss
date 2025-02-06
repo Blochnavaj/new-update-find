@@ -1,0 +1,221 @@
+* {
+    accent-color: #893168;
+    font-family: 'Inter';
+}
+
+.NotificatinToggle {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFBFD;
+    width: 914px;
+}
+
+.plan {
+    overflow: hidden;
+    transition: all 0.3s;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.planHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 20px;
+    height: 90px;
+    padding: 0 24px;
+
+
+    h2 {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        margin: 0;
+        font-size: 24px;
+        color: #1F2937;
+        font-weight: 700;
+
+        span {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+}
+
+.plan.active>.planHeader {
+    border-color: #893168;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.planHeader>div>h2 {
+    width: 50%;
+}
+
+.headerText>h2 {
+    color: #1f2937;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.headerText>h1 {
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 4px;
+    width: 273px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.headerText .discount {
+    margin-left: 8px;
+    background-color: #893168;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.planDetails {
+    padding: 16px 24px;
+    padding-bottom: 0px;
+
+
+}
+
+.planDetails>ul {
+    padding: 0;
+    font-weight: 400;
+    color: #1F2937;
+    font-size: 18px;
+}
+
+.planDetails>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.planDetails>div>ul {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.subscribeButton {
+    width: 324px;
+    display: block;
+    height: 52px;
+    background-color: #893168;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.additionalInfo {
+    font-size: 14px;
+    color: #6B7280;
+    width: 482px;
+}
+
+.active>.planHeader {
+    border-color: #893168;
+}
+
+.listItem {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E5E7EB;
+    height: 52px;
+}
+
+.listItem>img {
+    width: 14px;
+    margin-right: 9px;
+}
+
+.toggleContainer {
+    width: 43px;
+    height: 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #E5E7EB;
+    padding: 3px;
+
+
+    div {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+}
+
+.toggleContainer.active {
+    background-color: #893168;
+
+    div {
+        transform: translateX(19px);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .NotificatinToggle {
+        width: 370px;
+    }
+
+    .planDetails {
+        padding-top: 0;
+    }
+
+    .planDetails>div {
+        flex-direction: column;
+    }
+
+    .planDetails>div>ul {
+        width: 100%;
+        margin-right: 0;
+
+    }
+
+    .listItem {
+        font-size: 14px;
+        font-weight: 400;
+        color: #1f2937;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E5E7EB;
+        height: 52px;
+    }
+
+    .listItem>img {
+        width: 11px;
+        margin-right: 9px;
+    }
+}

@@ -1,0 +1,234 @@
+.plan {
+    width: 678px;
+    margin: 16px 0;
+}
+
+.plan.active>.planHeader {
+    border: 1.5px solid #893168;
+}
+
+.planHeader {
+    display: flex;
+
+    height: 63px;
+    padding: 0 28px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 20px;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.infoContainer>img {
+    width: 10px;
+    margin-left: 8px;
+}
+
+.arrow>img {
+    width: 15px;
+}
+
+.arrow {
+    font-size: 20px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    color: #893168;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.planDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 28px;
+    width: 100%;
+}
+
+.planDetails>div>div {
+    display: flex;
+    align-items: center;
+
+    h3 {
+        color: #6B7280;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+
+
+
+
+}
+
+.planDetails>div>div>img {
+    width: 11px;
+    margin-left: 6px;
+    font-weight: 500;
+}
+
+.planDetails>div>div>h2 {
+    color: #1f2937;
+    background-color: #5BB87D;
+    color: white;
+    margin-left: 8px;
+    width: 54px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.toggleContainer {
+    width: 43px;
+    height: 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #893168;
+
+    div {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+}
+
+.header>h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.planDetails>div>div>h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #6B7280;
+}
+
+.infoContainer {
+    position: relative;
+}
+
+.infoText {
+    position: absolute;
+    width: 313px;
+    height: 160px;
+    background-image: url("./../../../assets/infoTextBGfilpped.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+    left: -55px;
+    padding: 8px 20px;
+    padding-top: 22px;
+    z-index: 30;
+}
+
+.infoContainer.flipped>.infoText {
+    background-image: url("./../../../assets/infoTextBG.png");
+    left: -235px;
+}
+
+.infoText>p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f2937;
+}
+
+.infoTextHead {
+    display: none;
+}
+
+
+
+@media (max-width: 640px) {
+    .plan {
+        width: 370px;
+    }
+
+    .planHeader {
+        height: 79px;
+        padding: 0 20px;
+    }
+
+    .header>h1 {
+        font-size: 14px;
+    }
+
+    .planHeader>h1 {
+        font-size: 14px;
+    }
+
+    .planDetails {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 0;
+        padding: 0 20px;
+    }
+
+    .infoTextHead {
+        display: block;
+        font-size: 14px;
+        color: #1F2937;
+        font-weight: 400;
+        padding: 20px;
+    }
+
+    .infoContainer.flipped.last>.infoText {
+        background-image: url("./../../../assets/infoTextBGfilpped.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-x: center;
+        background-position-y: bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 20px;
+        left: -55px;
+    }
+
+    .header>.infoContainer {
+        display: none;
+    }
+
+    .planDetails>div>div>div>img {
+        width: 23px;
+        margin-left: 6px;
+        font-weight: 500;
+    }
+
+    .planDetails>div>div {
+        h1 {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}

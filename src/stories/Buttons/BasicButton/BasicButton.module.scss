@@ -1,0 +1,40 @@
+.button {
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    display: inline-block;
+    text-align: center;
+    width: 442px;
+    height: 52px;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .button {
+        width: 370px;
+        font-size: 14px;
+        padding: 12px 0;
+        height: 45px;
+    }
+}
+
+.enabled {
+    background-color: #893168;
+    color: white;
+}
+
+.disabled {
+    background-color: white;
+    color: #6b7280;
+    border: 1px solid #6b7280;
+    width: 413px;
+}
+
+@media (max-width: 640px) {
+    .disabled {
+        width: 370px;
+        font-size: 14px;
+        height: 45px;
+    }
+}

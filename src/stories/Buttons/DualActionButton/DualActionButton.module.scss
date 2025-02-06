@@ -1,0 +1,59 @@
+.button {
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    height: 52px;
+    font-weight: 500;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.SaveFilters {
+    background-color: white;
+    color: #893168;
+    border: 1px solid #893168;
+    width: 190px;
+}
+
+.SeeListings {
+    background-color: #893168;
+    color: white;
+    width: 190px;
+}
+
+.Sort {
+    background-color: #893168;
+    color: white;
+    width: 205px;
+}
+
+.icon {
+    width: 24px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+    .button {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .SaveFilters {
+        width: 175px;
+    }
+
+    .SeeListings {
+        width: 175px;
+    }
+
+    .Sort {
+        width: 190px;
+    }
+}

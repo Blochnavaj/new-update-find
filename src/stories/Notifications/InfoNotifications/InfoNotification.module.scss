@@ -1,0 +1,31 @@
+.notification {
+    border-radius: 10px;
+    background-color: #576C8A;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 13px;
+    color: white;
+    width: 370px;
+}
+
+.notification>div {
+    display: flex;
+    align-items: start;
+}
+
+.notification>div>img {
+    height: 15px;
+}
+
+.notification>div>h1 {
+    margin: 0;
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 285px;
+}
+
+span {
+    font-weight: 600;
+}

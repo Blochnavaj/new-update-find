@@ -1,0 +1,170 @@
+.productcard {
+    cursor: pointer;
+    height: 425px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
+}
+
+.ad.productcard {
+    min-width: 206px;
+}
+
+.productimg {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.productimg>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productinfo {
+    padding: 20px;
+}
+
+.productinfo>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productinfo>div>h1 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #1F2937;
+    font-family: 'Inter', sans-serif;
+}
+
+.green>.productinfo>div>h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    background-color: #5BB87D;
+    border-radius: 10px;
+    width: 51px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey>.productinfo>div>h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    background-color: #576C8A;
+    border-radius: 10px;
+    width: 51px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productinfo>h1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6B7280;
+    margin: 5px 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productinfo>h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6B7280;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.productcard.ad {
+    width: 206px;
+    height: 270px;
+
+    .productimg {
+        height: 180px;
+    }
+
+    .productinfo {
+        padding: 8px 13px;
+    }
+
+    .productinfo>div>h1 {
+        font-size: 16px;
+    }
+
+    .productinfo>h1 {
+        font-size: 14px;
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .green>.productinfo>div>h2 {
+        font-size: 14px;
+        width: 46px;
+        height: 23px;
+    }
+
+    .grey>.productinfo>div>h2 {
+        font-size: 14px;
+        width: 46px;
+        height: 23px;
+    }
+
+    .productinfo>h2 {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1500px) {
+    .productcard {
+        width: 100%;
+        min-width: 180px;
+        height: 263px;
+    }
+
+    .productimg {
+        height: 180px;
+    }
+
+    .productinfo {
+        padding: 8px 13px;
+    }
+
+    .productinfo>div>h1 {
+        font-size: 16px;
+    }
+
+    .productinfo>h1 {
+        font-size: 14px;
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .green>.productinfo>div>h2 {
+        font-size: 14px;
+        width: 46px;
+        height: 23px;
+    }
+
+    .grey>.productinfo>div>h2 {
+        font-size: 14px;
+        width: 46px;
+        height: 23px;
+    }
+
+    .productinfo>h2 {
+        font-size: 14px;
+        margin: 0;
+    }
+}
