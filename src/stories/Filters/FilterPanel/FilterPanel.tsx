@@ -58,7 +58,7 @@ const FilterPanel = () => {
             <div className={styles.filtersList}>
 
                 {/* PRICE FILTER */}
-                <div>
+                 <div>
                     <div className={styles.rangeFilter} onClick={() => togglePanel('range')}>
                         {!activePanels.range && (
                             <div className={styles.inactiveRange}>

@@ -5,10 +5,8 @@ import './../../../index.css';
 
 type SubscriptionPlan = {
     title: string;
-    label: string;
     price: string;
     benefits: string[];
-    benefits2: string[];
     isActive: boolean;
     discount?: string;
 };
@@ -18,19 +16,16 @@ type NotificationToggleProps = {
 };
 
 const NotificationToggle = ({ plans }: NotificationToggleProps) => {
-    // Track which plans are expanded
-    const [openPlans, setOpenPlans] = useState<{ [key: number]: boolean }>({});
-
-    // Track which plans have notifications enabled
-    const [enabledPlans, setEnabledPlans] = useState<{ [key: number]: boolean }>({});
+    // Track the currently open plan
+    const [openPlanIndex, setOpenPlanIndex] = useState<number | null>(null);
 
     // Toggle details dropdown
     const handleToggleDropdown = (index: number) => {
-        setOpenPlans((prev) => ({
-            ...prev,
-            [index]: !prev[index], // Toggle the state of the selected plan
-        }));
+        setOpenPlanIndex((prevIndex) => (prevIndex === index ? null : index));
     };
+
+    // Track which plans have notifications enabled
+    const [enabledPlans, setEnabledPlans] = useState<{ [key: number]: boolean }>({});
 
     // Toggle notification switch
     const handleToggleNotification = (index: number, event: React.MouseEvent) => {
@@ -44,11 +39,11 @@ const NotificationToggle = ({ plans }: NotificationToggleProps) => {
     return (
         <div className={styles.NotificationToggle}>
             {plans.map((plan, index) => (
-                <div key={index} className={`${styles.plan} ${(openPlans[index] ? styles.active : '')}}`}>
+                <div key={index} className={`${styles.plan} ${openPlanIndex === index ? styles.active : ''}`}>
                     <div className={styles.planHeader} onClick={() => handleToggleDropdown(index)}>
                         <div className={styles.headerText}>
-                            <h2>{plan.title}</h2>
-                            <h1>{plan.label}</h1>
+                            <h2>Saved Search {index}</h2>
+                            <h1>BWM, Audi, Toyota, Nissan, Tesla, Lada, Hyundai, Haval, Automatic, Color...</h1>
                         </div>
                         <div
                             className={`${styles.toggleContainer} ${enabledPlans[index] ? styles.active : ''}`}
@@ -57,7 +52,7 @@ const NotificationToggle = ({ plans }: NotificationToggleProps) => {
                             <div className={styles.togglHead}></div>
                         </div>
                     </div>
-                    {openPlans[index] && (
+                    {openPlanIndex === index && (
                         <div className={styles.planDetails}>
                             <div>
                                 <ul className={styles.ticklist}>
@@ -68,7 +63,7 @@ const NotificationToggle = ({ plans }: NotificationToggleProps) => {
                                     ))}
                                 </ul>
                                 <ul className={styles.crosslist}>
-                                    {plan.benefits2.map((benefit, idx) => (
+                                    {plan.benefits.map((benefit, idx) => (
                                         <li className={styles.listItem} key={idx}>
                                             <img src={tick} alt="tick" /> {benefit}
                                         </li>

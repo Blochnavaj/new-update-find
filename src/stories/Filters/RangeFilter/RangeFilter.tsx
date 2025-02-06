@@ -98,5 +98,4 @@ const RangeFilter = ({ min, max, step = 100, currency = '$' }: RangeFilterProps)
     );
 };
 
-
 export default RangeFilter;
