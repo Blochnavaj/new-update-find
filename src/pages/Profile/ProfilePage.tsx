@@ -19,7 +19,7 @@ const ProfilePage = () => {
                     <Link to="/subscription">
                         <div className='z-50 absolute right-[150px] top-1/3 h-[52px] w-[190px] '>
                         </div>
-                    <SubscriptionCard active='Free' subscription='Free Plan' />
+                        <SubscriptionCard active='Free' subscription='Free Plan' />
                     </Link>
                 </div>
             </div>
