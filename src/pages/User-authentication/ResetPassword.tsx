@@ -24,7 +24,7 @@ const ResetPassword = () => {
                             onMouseEnter={handlePasswordMouseEnter}
                             onMouseLeave={handlePasswordMouseLeave}
                         >
-                            <img className='h-[23px] md:h-[10px] mx-[11px]' src={info} alt="Info" />
+                            <img className='h-[23px] md:h-[10px] mx-[11px] md:mt-[6px]' src={info} alt="Info" />
                             {hoveredInfo && (
                                 <div className='infochat larger'>
                                     <ul className='list-disc pl-[20px] pt-[10px]'>
