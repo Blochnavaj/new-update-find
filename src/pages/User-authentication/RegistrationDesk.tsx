@@ -32,7 +32,7 @@ const RegistrationDesk = () => {
               className='absolute right-[-28px] md:right-[-36px]'
               onClick={() => handleInfoToggle('name')}
             >
-              <img className='h-[18px] md:h-[10px] mr-9 cursor-pointer' src={info} alt='Info' />
+              <img className='h-[18px] md:h-[10px] mr-9 md:mr-6 cursor-pointer' src={info} alt='Info' />
               {activeInfo ==='name'&& (
                 <div className='infochat'>
                   <ul className='list-disc pl-5 pt-2'>
@@ -52,7 +52,7 @@ const RegistrationDesk = () => {
               className='absolute right-[-28px] md:right-[-36px]'
               onClick={() => handleInfoToggle('password')}
             >
-              <img className='h-[18px] md:h-[10px]  mr-9 cursor-pointer' src={info} alt='Info' />
+              <img className='h-[18px] md:h-[10px]  mr-9  md:mr-6 cursor-pointer' src={info} alt='Info' />
               {activeInfo === 'password' && (
                 <div className='infochat larger'>
                   <ul className='list-disc pl-5 pt-2'>
