@@ -9,12 +9,11 @@ import profile from './../../assets/profileIcon.png';
 import email from './../../assets/emailIcon.png';
 
 const RegistrationDesk = () => {
-    const [activeInfo, setActiveInfo] = useState<string | null>(null);
-  
-    const handleInfoToggle = (infoType: string) => {
-      setActiveInfo(activeInfo === infoType ? null : infoType);
-    };
-  
+  const [activeInfo, setActiveInfo] = useState<string | null>(null);
+
+  const handleToggleInfo = (infoType: string) => {
+    setActiveInfo(activeInfo === infoType ? null : infoType);
+  };
 
   return (
     <div className='flex flex-col items-center p-4 md:p-[55px] w-full max-w-full min-h-screen bg-[#f3f4f6]'>
@@ -30,10 +29,12 @@ const RegistrationDesk = () => {
             <SimpleInputField imgpath={profile} active='default' label='Name' />
             <div
               className='absolute right-[-28px] md:right-[-36px]'
-              onClick={() => handleInfoToggle('name')}
+              onMouseEnter={() => setActiveInfo('name')}
+              onMouseLeave={() => setActiveInfo(null)}
+              onClick={() => handleToggleInfo('name')}
             >
               <img className='h-[18px] md:h-[10px] mr-9 md:mr-6 cursor-pointer' src={info} alt='Info' />
-              {activeInfo ==='name'&& (
+              {activeInfo === 'name' && (
                 <div className='infochat'>
                   <ul className='list-disc pl-5 pt-2'>
                     <li className='text-sm text-[#1f2937]'>Must not be empty</li>
@@ -50,9 +51,11 @@ const RegistrationDesk = () => {
             <PasswordInputField />
             <div
               className='absolute right-[-28px] md:right-[-36px]'
-              onClick={() => handleInfoToggle('password')}
+              onMouseEnter={() => setActiveInfo('password')}
+              onMouseLeave={() => setActiveInfo(null)}
+              onClick={() => handleToggleInfo('password')}
             >
-              <img className='h-[18px] md:h-[10px]  mr-9  md:mr-6 cursor-pointer' src={info} alt='Info' />
+              <img className='h-[18px] md:h-[10px] mr-9 md:mr-6 cursor-pointer' src={info} alt='Info' />
               {activeInfo === 'password' && (
                 <div className='infochat larger'>
                   <ul className='list-disc pl-5 pt-2'>
