@@ -77,7 +77,7 @@ const catalogDataList = [
         kilometers: '15000 km',
     },
     {
-        active: 'green',
+        active: 'grey',
         imgpath: car,
         price: '$25000',
         discount: '-15%',
@@ -93,7 +93,7 @@ const catalogDataList = [
         kilometers: '5000 km',
     },
     {
-        active: 'grey',
+        active: 'green',
         imgpath: car,
         price: '$22000',
         discount: '-12%',
@@ -101,7 +101,7 @@ const catalogDataList = [
         kilometers: '15000 km',
     },
     {
-        active: 'green',
+        active: 'grey',
         imgpath: car,
         price: '$25000',
         discount: '-15%',
@@ -109,7 +109,7 @@ const catalogDataList = [
         kilometers: '12000 km',
     },
     {
-        active: 'grey',
+        active: 'green',
         imgpath: car,
         price: '$30000',
         discount: '-5%',
@@ -117,7 +117,7 @@ const catalogDataList = [
         kilometers: '5000 km',
     },
     {
-        active: 'grey',
+        active: 'green',
         imgpath: car,
         price: '$22000',
         discount: '-12%',
