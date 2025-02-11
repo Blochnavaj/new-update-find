@@ -192,9 +192,12 @@ const ProductListing = () => {
       )
       }
 
-      <div className='fixed mx-auto w-full bottom-0 m-0 flex justify-center z-[9999]'>
-        <MainMenu />
-      </div>
+        {/* Main Menu - Hidden when galleryActive is true */}
+        {!galleryActive && (
+        <div className="fixed mx-auto w-full bottom-0 m-0 flex justify-center z-[9999]">
+          <MainMenu />
+        </div>
+      )}
       <div className='relative hidden md:block'>
         <div className='w-full h-[443px]  absolute z-40' onClick={() => setGalleryActive(true)}></div>
 

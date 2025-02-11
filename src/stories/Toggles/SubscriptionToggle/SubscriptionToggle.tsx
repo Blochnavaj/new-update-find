@@ -60,6 +60,7 @@ const SubscriptionToggle = ({ plans }: SubscriptionToggleProps) => {
               onClick={(e) => handleRadioSelection(index, e)}
               readOnly
               style={{ cursor: 'pointer' }}
+              className='w-4 h-4'
             />
           </div>
 

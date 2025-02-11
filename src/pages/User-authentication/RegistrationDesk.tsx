@@ -36,7 +36,7 @@ const RegistrationDesk = () => {
               <img className='h-[18px] md:h-[10px] mr-9 md:mr-6 cursor-pointer' src={info} alt='Info' />
               {activeInfo === 'name' && (
                 <div className='infochat'>
-                  <ul className='list-disc pl-5 pt-2'>
+                  <ul className='list-disc pl-5 pt-4'>
                     <li className='text-sm text-[#1f2937]'>Must not be empty</li>
                     <li className='text-sm text-[#1f2937]'>Should only contain alphabetic characters [a-zA-Z]</li>
                     <li className='text-sm text-[#1f2937]'>Length should be 3 chars minimum and 15 chars maximum</li>

@@ -63,7 +63,7 @@ input[type=number] {
 
 .infochat {
   position: absolute;
-  width: 313px;
+  width: 290px;
   height: 160px;
   background-image: url("./assets/infoTextBG.png");
   background-repeat: no-repeat;
@@ -83,13 +83,14 @@ input[type=number] {
 
 .infochat.larger {
   height: 192px;
+  width: 350px;
   background-image: url("./assets/infochat.png");
   background-size: cover;
   padding-top: 28px;
 }
 
 .infochat.larger.mini {
-  height: 155px;
+  height: 144px;
   background-image: url("./assets/infochat.png");
   background-size: cover;
   padding-top: 28px;
