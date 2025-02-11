@@ -40,7 +40,7 @@ const ResetPassword = () => {
                     </div>
 
                     <PasswordInputField placeholder='New Password' />
-                    <PasswordInputField />
+                    <PasswordInputField  placeholder='Password Again'/>
                     <div className='h-[108px]'>
 
                     </div>

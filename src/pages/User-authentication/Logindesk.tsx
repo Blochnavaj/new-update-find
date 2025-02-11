@@ -5,11 +5,10 @@ import PasswordInputField from '../../stories/Input-Fields/PasswordInputField/Pa
 import BasicButton from '../../stories/Buttons/BasicButton/BasicButton';
 import emailicon from './../../assets/emailIcon.png';
 
-
 const Logindesk = () => {
     return (
-        <div className='w-screen min-h-screen bg-[#f3f4f6]'>
-            <div className='flex flex-col items-center py-[70px] md:pt-[55px] w-full '>
+        <div className='w-full min-h-screen bg-[#f3f4f6]  '>
+            <div className='flex flex-col items-center py-[70px] md:pt-[55px] w-full'>
                 <img className='w-[240px]' src={headerimg} />
                 <div className='grid gap-y-[15px] items-center grid-cols-1'>
                     <h1 className='mt-[127px] text-[#1F2937] text-[16px] font-medium text-center'>Login</h1>
@@ -21,8 +20,7 @@ const Logindesk = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
-export default Logindesk
+export default Logindesk;
