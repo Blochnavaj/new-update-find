@@ -26,8 +26,8 @@ const ResetPassword = () => {
                         >
                             <img className='h-[23px] md:h-[10px] mx-[11px] md:mt-[6px]' src={info} alt="Info" />
                             {hoveredInfo && (
-                                <div className='infochat larger'>
-                                    <ul className='list-disc pl-[20px] pt-[10px]'>
+                                <div className='infochat larger resetpassword'>
+                                    <ul className='list-disc pl-[20px] pt-[5px]'>
                                         <li className='text-[14px] text-[#1f2937] font-normal'>Password length should be 6 chars minimum and 20 chars maximum.</li>
                                         <li className='text-[14px] text-[#1f2937] font-normal'>Include at least one uppercase letter.</li>
                                         <li className='text-[14px] text-[#1f2937] font-normal'>Include at least one lowercase letter.</li>

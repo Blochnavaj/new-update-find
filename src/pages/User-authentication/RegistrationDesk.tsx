@@ -58,7 +58,7 @@ const RegistrationDesk = () => {
               <img className='h-[18px] md:h-[10px] mr-9 md:mr-6 cursor-pointer' src={info} alt='Info' />
               {activeInfo === 'password' && (
                 <div className='infochat larger'>
-                  <ul className='list-disc pl-5 pt-2'>
+                  <ul className='list-disc pl-5 '>
                     <li className='text-sm text-[#1f2937]'>Password length should be 6 chars minimum and 20 chars maximum.</li>
                     <li className='text-sm text-[#1f2937]'>Include at least one uppercase letter.</li>
                     <li className='text-sm text-[#1f2937]'>Include at least one lowercase letter.</li>

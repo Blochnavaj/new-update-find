@@ -82,8 +82,16 @@ input[type=number] {
 }
 
 .infochat.larger {
-  height: 192px;
-  width: 350px;
+  height: 180px;
+  width: 310px;
+  background-image: url("./assets/infochat.png");
+  background-size: cover;
+  padding-top: 28px;
+}
+
+.infochat.larger.resetpassword {
+  height: 190px;
+  width: 310px;
   background-image: url("./assets/infochat.png");
   background-size: cover;
   padding-top: 28px;
